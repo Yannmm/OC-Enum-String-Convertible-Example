@@ -11,7 +11,7 @@
 
 /*
  Reference: http://stackoverflow.com/a/202511
- 
+ For how to use, see https://github.com/Yannmm/OC-Enum-String-Convertible-Example
  */
 
 #pragma mark - Enum Factory Macros

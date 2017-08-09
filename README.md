@@ -155,7 +155,7 @@ return (EnumType)0; \
 
 ## 参考资料
 
-1. [示例代码]()
+1. [示例代码](https://github.com/Yannmm/OC-Enum-String-Convertible-Example)
 2. [Easy way to use variables of enum types as string in C?
 ](https://stackoverflow.com/questions/147267/easy-way-to-use-variables-of-enum-types-as-string-in-c/202511#202511)
 
