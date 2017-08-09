@@ -15,7 +15,7 @@
 
 ### A.1 在.h文件中定义枚举，声明反射函数
 
-```
+```c
 // M1
 #define RAP_DIRECTION(XX) \
 XX(RAPDirectionEast, ) \
@@ -34,7 +34,7 @@ DECLARE_ENUM(RAPDirection, RAP_DIRECTION)
 
 ### A.2 在.m文件中实现反射函数
 
-```
+```c
 DEFINE_ENUM(RAPDirection, RAP_DIRECTION)
 ```
 - RAPDirection和RAP_DIRECTION要与.h中的宏对应。RAPDirection是枚举类型名称，RAP_DIRECTION是宏，展开后变成多个枚举case。
@@ -43,7 +43,7 @@ DEFINE_ENUM(RAPDirection, RAP_DIRECTION)
 
 1. 在任意.h文件中定义枚举，声明反射函数：
 
-	```
+	```c
 	#import "EnumMarcos.h"
 
 	#define RAP_DIRECTION(XX) \
@@ -57,13 +57,13 @@ DEFINE_ENUM(RAPDirection, RAP_DIRECTION)
 
 2. 在相应的.m文件中实现反射函数：
 
-	```
+	```c
 	DEFINE_ENUM(RAPDirection, RAP_DIRECTION)
 	```
 
 3. 尝试使用：
 
-	```
+	```c
     NSString *str = NSStringFromRAPDirection(RAPDirectionEast);
     NSLog(@"RAPDirectionEast has case name: %@", str);
     
@@ -102,7 +102,7 @@ EnumType EnumType##FromNSString(NSString *string); \
 
 #### B.1.1 ENUM_VALUE(name, assign)
 
-```
+```c
 #define ENUM_VALUE(name, assign) name assign,
 ```
 
@@ -135,7 +135,7 @@ return (EnumType)0; \
 
 #### B.2.1 ENUM_CASE(name, assign)
 
-```
+```c
 #define ENUM_CASE(name, assign) case name: return @#name;
 ```
 
@@ -144,7 +144,7 @@ return (EnumType)0; \
 
 #### B.2.1 ENUM_STRCMP(name, assign)
 
-```
+```c
 #define ENUM_STRCMP(name, assign) if ([string isEqualToString:@#name]) return name;
 ```
 
